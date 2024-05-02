@@ -23,7 +23,7 @@ class ArticleRequest extends FormRequest
                         'string',
                         'regex:/^(en|zh|ja)$/'
                     ],
-                    'title'         => 'required|max:20',
+                    'title'         => 'required|string|max:20',
                     'content'       => 'required|string',
                 ];
             case 'DELETE':
