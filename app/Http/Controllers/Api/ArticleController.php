@@ -38,7 +38,7 @@ class ArticleController extends Controller
      *         required=true,
      *         @OA\JsonContent(
      *             required={"id", "language_code", "title", "content"},
-     *             @OA\Property(property="id", type="string", example="Sample ID"),
+     *             @OA\Property(property="id", type="int", example=1),
      *             @OA\Property(property="language_code", type="string", example="en"),
      *             @OA\Property(property="title", type="string", example="Sample Title"),
      *             @OA\Property(property="content", type="string", example="Sample Content")
@@ -91,7 +91,7 @@ class ArticleController extends Controller
      *         required=true,
      *         @OA\JsonContent(
      *             required={"id"},
-     *             @OA\Property(property="id", type="string", example="Sample ID"),
+     *             @OA\Property(property="id", type="int", example=1),
      *         )
      *     ),
      *     @OA\Response(
@@ -134,7 +134,7 @@ class ArticleController extends Controller
      *         required=true,
      *         @OA\JsonContent(
      *             required={"id"},
-     *             @OA\Property(property="id", type="string", example="Sample ID"),
+     *             @OA\Property(property="id", type="int", example=1),
      *         )
      *     ),
      *     @OA\Response(
