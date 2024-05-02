@@ -14,6 +14,6 @@ Route::controller(ArticleController::class)->group(function () {
     //刪除文章
     Route::delete('/delete/article', 'deleteArticle')->name('deleteArticle');
     //查詢文章
-    Route::get('/select/article', 'getArticle')->name('getArticle');
+    Route::get('/select/article', 'selectArticle')->name('selectArticle');
 });
 
