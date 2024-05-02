@@ -141,7 +141,32 @@ class ArticleController extends Controller
      *         response=200,
      *         description="Article selected successfully",
      *         @OA\JsonContent(
-     *             @OA\Property(property="message", type="string", example="Article selected successfully")
+     *             @OA\Property(property="message", type="string", example="Article selected successfully"),
+     *             @OA\Property(property="data", type="object", example={
+     *                 "id": 1,
+     *                 "created_at": "2024-05-02T02:14:35.000000Z",
+     *                 "updated_at": "2024-05-02T02:14:35.000000Z",
+     *                 "get_articles": {
+     *                     {
+     *                         "id": 1,
+     *                         "article_id": 1,
+     *                         "language_code": "en",
+     *                         "title": "text_title",
+     *                         "content": "test_content",
+     *                         "created_at": "2024-05-02T02:14:35.000000Z",
+     *                         "updated_at": "2024-05-02T02:14:35.000000Z"
+     *                     },
+     *                     {
+     *                         "id": 2,
+     *                         "article_id": 1,
+     *                         "language_code": "ja",
+     *                         "title": "text_title",
+     *                         "content": "test_content",
+     *                         "created_at": "2024-05-02T02:14:35.000000Z",
+     *                         "updated_at": "2024-05-02T02:14:35.000000Z"
+     *                     }
+     *                 }
+     *             })
      *         )
      *     ),
      *     @OA\Response(
