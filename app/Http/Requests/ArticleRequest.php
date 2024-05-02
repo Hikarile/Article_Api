@@ -37,7 +37,8 @@ class ArticleRequest extends FormRequest
     {
         return [
             'id.required' => 'Article ID is required.',
-            'id.exists' => 'Article does not exist.',
+            'id.exists' => 'Article ID does not exist.',
+            'id.numeric' => 'Article ID must be a numeric.',
             'language_code.required' => 'Language code is required.',
             'language_code.string' => 'Language code must be a string.',
             'language_code.regex' => 'language code must be either "en", "zh", or "ja".',
