@@ -38,7 +38,7 @@ class ArticleService
             ]);
             DB::commit();
             return response()->json([
-                'message' => '新增成功'
+                'message' => 'Article created successfully'
             ], 200);
         } catch (Exception $exception) {
             DB::rollBack();
@@ -62,7 +62,7 @@ class ArticleService
             Article::where('id', $id)->delete();
             DB::commit();
             return response()->json([
-                'message' => '刪除成功'
+                'message' => 'Article deleted successfully'
             ], 200);
         } catch (Exception $exception) {
             DB::rollBack();
@@ -87,7 +87,7 @@ class ArticleService
             $article = Article::where('id', $id)->with(['getArticles'])->get();
             DB::commit();
             return response()->json([
-                'message' => '查詢成功',
+                'message' => 'Article selected successfully',
                 'data'    => $article
             ], 200);
         } catch (Exception $exception) {
